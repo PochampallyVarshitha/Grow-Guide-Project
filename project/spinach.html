@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Growing Guide - Spinach</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #5A9;
+        }
+        h2 {
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .button-group button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #5A9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button-group button:hover {
+            background-color: #487;
+        }
+        .content-section {
+            display: none;
+            margin-top: 20px;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .image-preview img {
+            max-width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #DC143C;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Spinach Plant</h1>
+    
+    <!-- Pictures with Day Labels -->
+    <h2>Day 1</h2>
+    <div class="image-preview">
+        <img src="https://th.bing.com/th/id/R.23d1a75afa8e6d7716d52ef94fa53c95?rik=7CFqXTmOQ3pXzw&riu=http%3a%2f%2fherbseic.com%2fwp-content%2fuploads%2f2018%2f02%2fSpinach-seeds-EIC5.jpg&ehk=H6NIm%2fBVYWVLwIm1YIJiJNQVm7rGr%2fnmkZM3RoaHe6g%3d&risl=&pid=ImgRaw&r=0" alt="Spinach Seeds Image">
+    </div>
+    
+    <h2>Day 40</h2>
+    <div class="image-preview">
+        <img src="https://th.bing.com/th/id/OIP.-7iMFYMkwiQHove_mZ_wOQHaD4?rs=1&pid=ImgDetMain" alt="White Spinach Plant Image">
+    </div>
+    
+    <!-- Option Buttons -->
+    <div class="button-group">
+        <button onclick="showSection('requirements')" aria-controls="requirements">Requirements</button>
+        <button onclick="showSection('calendar')" aria-controls="calendar">Calendar</button>
+        <button onclick="showSection('steps')" aria-controls="steps">Steps</button>
+    </div>
+    
+    <!-- Content Sections -->
+    <div class="content-section" id="requirements">
+        <h3>Requirements</h3>
+       
+    <ol>
+        <li><strong>Choose the Right Time:</strong> Plant in early spring or fall for optimal growth.</li>
+        <li><strong>Select a Location:</strong> Find a sunny spot with well-drained, fertile soil.</li>
+        <li><strong>Prepare the Soil:</strong> Enrich soil with compost and ensure proper pH levels.</li>
+        <li><strong>Sow the Seeds:</strong> Plant seeds ½ to 1 inch deep, spacing appropriately.</li>
+        <li><strong>Water Regularly:</strong> Keep soil consistently moist; aim for 1 inch weekly.</li>
+        <li><strong>Control Weeds:</strong> Use mulch to suppress weeds and retain soil moisture.</li>
+        <li><strong>Monitor Pests:</strong> Check for pests; use organic methods for control.</li>
+        <li><strong>Harvest Leaves:</strong> Pick outer leaves first; continue harvesting for freshness.</li>
+    </ol>
+    </div>
+    
+    <div class="content-section" id="calendar">
+        <h3>Calendar</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning</th>
+                    <th>Afternoon</th>
+                    <th>Evening</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Day 1</td>
+                    <td>Prepare soil; plant spinach seeds</td>
+                    <td>Water to moisten soil thoroughly</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Day 2</td>
+                    <td>Check soil moisture</td>
+                    <td>Water lightly if top inch is dry</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Day 3</td>
+                    <td>Inspect seedlings (if sprouted)</td>
+                    <td>Water if soil feels dry</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Day 4</td>
+                    <td>Thin seedlings if overcrowded</td>
+                    <td>Check for pests and weeds</td>
+                    <td>Water if soil is dry</td>
+                </tr>
+                <tr>
+                    <td>Day 5</td>
+                    <td>Ensure 6 hours of sunlight</td>
+                    <td>Fertilize with a balanced fertilizer</td>
+                    <td>Water deeply to promote root growth</td>
+                </tr>
+                <tr>
+                    <td>Day 6</td>
+                    <td>Inspect for nutrient deficiencies</td>
+                    <td>Water lightly if needed</td>
+                    <td>Monitor plant health</td>
+                </tr>
+                <tr>
+                    <td>Day 7</td>
+                    <td>Review growth progress</td>
+                    <td>Water thoroughly</td>
+                    <td>Prepare for next week’s care</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="content-section" id="steps">
+        <h3>Steps to Grow Spinach</h3>
+        <ol>
+            <li><strong>Choose Seeds:</strong> Select high-quality spinach seeds that suit your climate. Popular varieties include ‘Savoy’ and ‘Flat Leaf.’ Ensure seeds are fresh for optimal germination and growth.</li>
+            <li><strong>Prepare the Soil:</strong> Prepare well-draining, fertile soil with a pH of 6.0 to 7.0. Mix in compost or well-rotted manure to improve nutrient content and soil structure.</li>
+            <li><strong>Sow Seeds:</strong> Plant spinach seeds ½ to 1 inch deep, spacing them 2 inches apart in rows. Ensure rows are about 12 inches apart for easy access and maintenance.</li>
+            <li><strong>Water Regularly:</strong> Keep the soil consistently moist but not soggy. Water spinach plants thoroughly, especially during dry periods, to support healthy growth and prevent bolting.</li>
+            <li><strong>Provide Sunlight:</strong> Ensure spinach receives 6 to 8 hours of sunlight daily. Spinach prefers cool weather; partial shade can help during warmer months, preventing stress and bolting.</li>
+            <li><strong>Monitor Growth:</strong> Regularly check for pests, diseases, and nutrient deficiencies. Thin seedlings if overcrowded to promote healthy growth and improve air circulation around plants.</li>
+            <li><strong>Harvest:</strong> Harvest spinach leaves when they are young and tender, typically 30 to 45 days after planting. Cut leaves at the base, allowing new growth to emerge.</li>
+        </ol>
+    </div>
+</div>
+
+<script>
+    // Show and hide sections
+    function showSection(sectionId) {
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>

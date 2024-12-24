@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Plants - Grow Guide</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: #fff;
+            padding: 15px 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        .my-plants-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .my-plants-container h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .plant {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .plant h3 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Grow Guide</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="gardening-tips.html">Gardening Tips</a></li>
+        </ul>
+    </nav>
+
+    <!-- My Plants Content -->
+    <div class="my-plants-container">
+        <h1>My Plants</h1>
+        <div id="plants-list">
+            <!-- Plant entries will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        // Function to retrieve liked plants from local storage
+        function displayLikedPlants() {
+            const likedPlants = JSON.parse(localStorage.getItem('likedPlants')) || [];
+            const plantsList = document.getElementById('plants-list');
+
+            if (likedPlants.length === 0) {
+                plantsList.innerHTML = '<p>No liked plants found.</p>';
+                return;
+            }
+
+            likedPlants.forEach(plant => {
+                const plantDiv = document.createElement('div');
+                plantDiv.className = 'plant';
+                plantDiv.innerHTML = `
+                    <h3>${plant.name}</h3>
+                    <p>Scientific Name: ${plant.scientificName}</p>
+                    <p>Watering Frequency: ${plant.wateringFrequency}</p>
+                    <a href="${plant.link}" target="_blank">View Plant Details</a>
+                `;
+                plantsList.appendChild(plantDiv);
+            });
+        }
+
+        // Call function to display liked plants
+        displayLikedPlants();
+    </script>
+</body>
+
+</html>

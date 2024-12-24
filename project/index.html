@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Guide - Introduction</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f9f5;
+            background-image: url('back ground 2.jpg'); /* Ensure the correct path to the image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        header {
+            background-color: #17B169;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            font-size: 1.8em;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo .emoji {
+            margin-right: 10px;
+            font-size: 1.8em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #2e8b57;
+            border-radius: 8px;
+        }
+
+        main {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        main h1 {
+            font-size: 3em;
+            color: #1DB954;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        /* Style for the Login Button */
+        .login-btn {
+            padding: 12px 30px;
+            background-color: #32CD32; /* Bright green */
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #2e8b57; /* Darker green on hover */
+            transform: scale(1.05); /* Enlarges slightly on hover */
+        }
+
+        .login-btn:active {
+            transform: scale(0.98); /* Shrinks on click */
+        }
+
+        footer {
+            background-color: #32CD32;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Leaf emoji as logo -->
+            <span class="emoji">&#127793;</span>
+            GrowGuide
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Welcome to Grow Guide!</h1>
+            <p>Your ultimate resource for gardening and growing your own food. Explore our features and learn how to cultivate your garden effectively.</p>
+            <h1>Grow Guide Features</h1>
+            <p>Hydroponic Methods, Intensive Gardening Techniques, Soil Preparation</p>
+            <p>By utilizing these methods, Grow Guide helps gardeners optimize their growing practices for better yields and efficient use of space.</p>
+            <p>Click below to get started:</p>
+
+            <!-- Login Button -->
+            <button class="login-btn" onclick="window.location.href='login.html'">Login/SignUp</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Grow Guide. All rights reserved.</p>
+    </footer>
+</body>
+</html>

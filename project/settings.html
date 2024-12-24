@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - GrowGuide</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #4caf50, #388e3c); /* Green gradient for GrowGuide */
+            color: #fff;
+            padding: 15px 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        .settings-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .settings-container h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4caf50; /* Green for GrowGuide branding */
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .setting-item h2 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .setting-toggle {
+            cursor: pointer;
+            background-color: #4caf50; /* Green button */
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .setting-toggle:hover {
+            background-color: #388e3c; /* Darker green on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">GrowGuide</div>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- Settings Content -->
+    <div class="settings-container">
+        <h1>Settings</h1>
+
+        <!-- Account Settings -->
+        <div class="setting-item">
+            <h2>Account Settings</h2>
+            <button class="setting-toggle" onclick="location.href='update_account.html'">Manage</button>
+        </div>
+
+        <!-- Privacy Settings -->
+        <div class="setting-item">
+            <h2>Privacy Settings</h2>
+            <button class="setting-toggle" onclick="location.href='privacy_settings.html'">Manage</button>
+        </div>
+
+        <!-- Notification Preferences -->
+        <div class="setting-item">
+            <h2>Notification Preferences</h2>
+            <button class="setting-toggle" onclick="location.href='notification_preferences.html'">Manage</button>
+        </div>
+
+        <!-- Theme Settings -->
+        <div class="setting-item">
+            <h2>Change Theme</h2>
+            <button class="setting-toggle" onclick="location.href='theme_settings.html'">Select</button>
+        </div>
+
+        <!-- Language Settings -->
+        <div class="setting-item">
+            <h2>Language Preferences</h2>
+            <button class="setting-toggle" onclick="location.href='language_settings.html'">Select</button>
+        </div>
+
+        <!-- Help and Support -->
+        <div class="setting-item">
+            <h2>Help & Support</h2>
+            <button class="setting-toggle" onclick="location.href='help_support.html'">Contact</button>
+        </div>
+    </div>
+</body>
+
+</html>

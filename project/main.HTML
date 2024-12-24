@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - GrowGuide</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('back ground 1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f0f2f5;
+        }
+
+        .navbar {
+            height: 60px;
+            width: 100%;
+            background-color: #3cb371;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            justify-content: space-between;
+        }
+
+        .navbar .logo {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo .emoji {
+            font-size: 1.6em;
+            margin-right: 10px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 15px;
+            margin-left: auto;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #2e8b57;
+        }
+
+        .menu-dots {
+            cursor: pointer;
+            color: white;
+            font-size: 1.5em;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .dot {
+            height: 6px;
+            width: 6px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 2px 0;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #3cb371;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-top: 10px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown a:hover {
+            background-color: #f0f2f5;
+        }
+
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #333;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-sections {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .dashboard-sections .section {
+            background-color: #d4edda;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            color: #333;
+        }
+
+        .dashboard-sections .section:hover {
+            background-color: #c3e6cb;
+            transform: translateY(-20px);
+        }
+
+        .section a {
+            text-decoration: none;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .section a:hover {
+            text-decoration: underline;
+        }
+
+        .logout-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #3cb371;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+
+        .logout-popup button {
+            margin: 5px;
+            padding: 10px;
+            background-color: #3cb371;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .logout-popup button:hover {
+            background-color: #2e8b57;
+        }
+    </style>
+    <script>
+        function showPopup() {
+            document.getElementById('logoutPopup').style.display = 'block';
+        }
+
+        function hidePopup() {
+            document.getElementById('logoutPopup').style.display = 'none';
+        }
+
+        function confirmLogout() {
+            alert("Logged out successfully!"); // Placeholder for actual logout logic
+            hidePopup();
+        }
+
+        function toggleDropdown() {
+            const dropdown = document.getElementById('dropdownMenu');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <span class="emoji">&#127793;</span>
+            GrowGuide
+        </div>
+        
+        <div class="menu-dots" onclick="toggleDropdown()">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div id="dropdownMenu" class="dropdown">
+            <a href="settings.html">Settings</a>
+            <a href="#help">Help</a>
+            <a href="#" onclick="showPopup()">Logout</a>
+        </div>
+    </div>
+
+    <div id="logoutPopup" class="logout-popup">
+        <p>Are you sure you want to log out?</p>
+        <button onclick="confirmLogout()">Yes</button>
+        <button onclick="hidePopup()">No</button>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to Your Gardening Dashboard!</h1>
+        <div class="dashboard-sections">
+            <div class="section">
+                <h3>My Plants</h3>
+                <p>View and manage your favorite plants.</p>
+                <a href="plants.html">Go to My Plants</a>
+            </div>
+            <div class="section">
+                <h3>Profile</h3>
+                <p>Update your profile and manage your preferences.</p>
+                <a href="profile.html">Visit Profile</a>
+            </div>
+            <div class="section">
+                <h3>Gardening Tips</h3>
+                <p>Access a variety of gardening tips and techniques.</p>
+                <a href="gardening-tips.html">View Gardening Tips</a>
+            </div>
+            <div class="section">
+                <h3>Settings</h3>
+                <p>Manage your account and security settings.</p>
+                <a href="settings.html">Account Settings</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

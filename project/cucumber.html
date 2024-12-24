@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Growing Guide - Cucumber</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #5A9;
+        }
+        h2 {
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .button-group button, .back-button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #5A9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button-group button:hover, .back-button:hover {
+            background-color: #487;
+        }
+        .content-section {
+            display: none;
+            margin-top: 20px;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .image-preview img {
+            max-width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #DC143C;
+            color: white;
+        }
+        .back-button-container {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <button class="back-button" onclick="goToGardeningTips()">Back</button>
+    </div>
+
+    <h1>Cucumber Plant</h1>
+    
+    <!-- Pictures with Day Labels -->
+    <h2>Day 1</h2>
+    <div class="image-preview">
+        <img src="https://th.bing.com/th/id/OIP.FAX11KYy_hCTL3HXyENq3wAAAA?rs=1&pid=ImgDetMain" alt="Spinach Seeds Image">
+    </div>
+    
+    <h2>Day 60</h2>
+    <div class="image-preview">
+        <img src="https://th.bing.com/th/id/OIP.0Dz7Odz41Cj8onGZ67Em2gHaEK?rs=1&pid=ImgDetMain" alt="White Spinach Plant Image">
+    </div>
+    
+    <!-- Option Buttons -->
+    <div class="button-group">
+        <button onclick="showSection('requirements')" aria-controls="requirements">Requirements</button>
+        <button onclick="showSection('calendar')" aria-controls="calendar">Calendar</button>
+        <button onclick="showSection('steps')" aria-controls="steps">Steps</button>
+    </div>
+    
+    <!-- Content Sections -->
+    <div class="content-section" id="requirements">
+        <h3>Requirements</h3>
+        <ol>
+            <li><strong>Choose the Right Time:</strong> Plant seeds after the last frost in warm soil.</li>
+            <li><strong>Select a Location:</strong> Find a sunny area with at least 6 hours daily.</li>
+            <li><strong>Prepare the Soil:</strong> Use well-drained, fertile soil rich in organic matter.</li>
+            <li><strong>Sow the Seeds:</strong> Plant seeds 1 inch deep, spacing 12 inches apart.</li>
+            <li><strong>Water Regularly:</strong> Keep soil consistently moist, especially during dry periods.</li>
+            <li><strong>Provide Support:</strong> Use trellises or stakes to support climbing cucumber vines.</li>
+            <li><strong>Monitor for Pests:</strong> Watch for aphids and beetles; apply organic pesticides if needed.</li>
+            <li><strong>Harvest Fruits:</strong> Pick cucumbers when firm and green; avoid over-ripening.</li>
+        </ol>
+    </div>
+    
+    <div class="content-section" id="calendar">
+        <h3>Calendar</h3>
+        <h1>Cucumber Plant Care Calendar - First Week</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning</th>
+                    <th>Afternoon</th>
+                    <th>Evening</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Day 1</td>
+                    <td>Prepare soil; plant cucumber seeds or seedlings.</td>
+                    <td>Water to moisten soil thoroughly.</td>
+                    <td>Check for any signs of pests.</td>
+                </tr>
+                <tr>
+                    <td>Day 2</td>
+                    <td>Check soil moisture; ensure it is adequately moist.</td>
+                    <td>Water lightly if the top inch is dry.</td>
+                    <td>Inspect for pests and remove any debris.</td>
+                </tr>
+                <tr>
+                    <td>Day 3</td>
+                    <td>Thin seedlings if overcrowded.</td>
+                    <td>Fertilize with a balanced fertilizer if necessary.</td>
+                    <td>Water deeply to encourage root growth.</td>
+                </tr>
+                <tr>
+                    <td>Day 4</td>
+                    <td>Ensure cucumber plants receive at least 6 hours of sunlight.</td>
+                    <td>Water lightly if soil feels dry.</td>
+                    <td>Monitor for any signs of disease.</td>
+                </tr>
+                <tr>
+                    <td>Day 5</td>
+                    <td>Check for weeds around the plants and remove them.</td>
+                    <td>Support plants with stakes or trellises if needed.</td>
+                    <td>Water if soil is dry.</td>
+                </tr>
+                <tr>
+                    <td>Day 6</td>
+                    <td>Inspect leaves for pests and diseases.</td>
+                    <td>Water thoroughly, ensuring even moisture.</td>
+                    <td>Mulch around plants to retain moisture.</td>
+                </tr>
+                <tr>
+                    <td>Day 7</td>
+                    <td>Review plant health and growth progress.</td>
+                    <td>Water as needed, ensuring soil is moist but not soggy.</td>
+                    <td>Prepare for the next week’s care routine.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+    <div class="content-section" id="steps">
+        <h3>Steps to Grow Cucumber</h3>
+       <div class="step">
+    <h2>1. Choose Seeds</h2>
+    <p>Select high-quality cucumber seeds based on your climate. Popular varieties include ‘Marketmore’ and ‘Pickling’ for specific growing needs.</p>
+</div>
+
+<div class="step">
+    <h2>2. Prepare the Soil</h2>
+    <p>Cucumbers thrive in well-drained, fertile soil with a pH of 6.0 to 7.0. Mix in compost to enhance nutrient levels.</p>
+</div>
+
+<div class="step">
+    <h2>3. Plant Seeds</h2>
+    <p>Sow cucumber seeds 1 inch deep, spacing them 3 feet apart in rows. Ensure adequate sunlight and access for maintenance.</p>
+</div>
+
+<div class="step">
+    <h2>4. Water Regularly</h2>
+    <p>Keep the soil consistently moist but not waterlogged. Water cucumbers deeply once or twice a week, especially in dry conditions.</p>
+</div>
+
+<div class="step">
+    <h2>5. Provide Support</h2>
+    <p>Use trellises or cages for cucumber plants to grow vertically. This helps save space, improves air circulation, and keeps fruits clean.</p>
+</div>
+
+<div class="step">
+    <h2>6. Monitor Growth</h2>
+    <p>Regularly check plants for pests and diseases. Remove any weeds and ensure sufficient spacing for healthy growth and sunlight exposure.</p>
+</div>
+
+<div class="step">
+    <h2>7. Fertilize Appropriately</h2>
+    <p>Apply a balanced fertilizer every few weeks to support healthy growth. Focus on nitrogen-rich options during the early growth stages.</p>
+</div>
+
+<div class="step">
+    <h2>8. Harvest</h2>
+    <p>Harvest cucumbers when they are young and firm, usually 6 to 8 inches long. Frequent picking encourages more fruit production.</p>
+</div>
+    </div>
+</div>
+
+<script>
+    // Show and hide sections
+    function showSection(sectionId) {
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+    }
+
+    // Redirect to gardening-tips.html
+    function goToGardeningTips() {
+        window.location.href = 'gardening-tips.html';
+    }
+</script>
+
+</body>
+</html>

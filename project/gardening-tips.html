@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('back ground 3.jpg'); /* Adjusted to point to the images folder */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+            color: white;
+        }
+        nav {
+            background-color: rgba(76, 175, 80, 0.8);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+        .logo .emoji {
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        #seasonsButton {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 15px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        #seasonsButton:hover {
+            background-color: #45a049;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 1;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .dropdown button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #4CAF50;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .dropdown button:hover {
+            background-color: #f0f0f0;
+             text-align: center;
+        }
+        .category {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .plant-button {
+            background-color: #e7f3e7;
+            border: 1px solid #4CAF50;
+            color: #4CAF50;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .plant-button:hover {
+            background-color: #d0e4d0;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <span class="emoji">&#127793;</span>
+        GrowGuide
+    </div>
+   
+</nav>
+
+<button id="seasonsButton" onclick="toggleDropdown()">Seasons</button>
+<div id="seasonsDropdown" class="dropdown">
+    <button onclick="showCategory('summer')">Summer</button>
+    <button onclick="showCategory('winter')">Winter</button>
+    <button onclick="showCategory('monsoon')">Monsoon</button>
+</div>
+
+<div id="categoryDisplay" class="category"></div>
+
+<script>
+    function toggleDropdown() {
+        const dropdown = document.getElementById('seasonsDropdown');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function showCategory(season) {
+        const categoryDisplay = document.getElementById('categoryDisplay');
+        categoryDisplay.innerHTML = '';
+
+        let categories = [];
+        if (season === 'summer') {
+            categories = ['Vegetables', 'Fruits', 'Flowers', 'Grains'];
+        } else if (season === 'winter') {
+            categories = ['Vegetables', 'Fruits', 'Flowers', 'Grains'];
+        } else if (season === 'monsoon') {
+            categories = ['Vegetables', 'Fruits', 'Flowers', 'Grains'];
+        }
+
+        categories.forEach(category => {
+            const button = document.createElement('button');
+            button.innerText = category;
+            button.onclick = () => showPlants(category);
+            button.style.background = 'none';
+            button.style.border = 'none';
+            button.style.color = '#4CAF50';
+            button.style.padding = '10px';
+            button.style.width = '100%';
+            button.style.textAlign = 'left';
+            button.style.cursor = 'pointer';
+            button.onmouseover = () => button.style.backgroundColor = '#f0f0f0';
+            button.onmouseout = () => button.style.backgroundColor = '';
+
+            categoryDisplay.appendChild(button);
+        });
+        
+        categoryDisplay.style.display = 'block';
+    }
+
+    function showPlants(category) {
+        const categoryDisplay = document.getElementById('categoryDisplay');
+        categoryDisplay.innerHTML = `<h3>${category}:</h3>`;
+        
+        let plants = [];
+        if (category === 'Vegetables') {
+            plants = ['Tomatoes', 'Spinach', 'Cucumber'];
+        } else if (category === 'Fruits') {
+            plants = ['Mangoes', 'Apples', 'Muskmelon', 'Guava', 'Papaya'];
+        } else if (category === 'Flowers') {
+            plants = ['Roses', 'Marigold', 'Hibiscus'];
+        } else if (category === 'Grains') {
+            plants = ['Wheat', 'Rice', 'Maize'];
+        }
+
+        plants.forEach(plant => {
+            const plantButton = document.createElement('button');
+            plantButton.innerText = plant;
+            plantButton.className = 'plant-button';
+            plantButton.onclick = () => {
+                if (plant === 'Spinach') {
+                    window.location.href = 'spinach.html'; // Redirect to spinach page
+                } else if (plant === 'Cucumber') {
+                    window.location.href = 'cucumber.html'; // Redirect to cucumber page
+                } else if (plant === 'Tomatoes') {
+                    window.location.href = 'tomatoes.html'; // Redirect to tomatoes page (if applicable)
+                }
+                // Add more else if blocks for other plants if necessary
+            };
+            categoryDisplay.appendChild(plantButton);
+        });
+    }
+</script>
+
+</body>
+</html>
